@@ -30,6 +30,7 @@ Rails::Initializer.run do |config|
   config.gem "formtastic", :version => "0.9.10"
   config.gem "paperclip", :version => "2.3.3"
   config.gem "mongoid", :version => "1.9.1"
+  config.gem "bson_ext", :version => "1.0.4"
 
   # Only load the plugins named here, in the order given (default is alphabetical).
   # :all can be used as a placeholder for all plugins not explicitly named

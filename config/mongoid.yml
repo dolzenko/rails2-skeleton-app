@@ -24,8 +24,8 @@ test:
 # set these environment variables on your prod server
 production:
   <<: *defaults
-  host: <%= URI.parse(ENV['MONGOHQ_URL']).host %>
-  port: <%= URI.parse(ENV['MONGOHQ_URL']).port %>
-  database: <%= URI.parse(ENV['MONGOHQ_URL']).path.gsub(/^\//, '') %>
-  username: <%= URI.parse(ENV['MONGOHQ_URL']).user %>
-  password: <%= URI.parse(ENV['MONGOHQ_URL']).password %>
+  host: <%= Rails.logger.fatal("!!! " + ENV['MONGOHQ_URL'].inspect); (uri = URI.parse(ENV['MONGOHQ_URL'])).host %>
+  port: <%= uri.port %>
+  database: <%= uri.path.gsub(/^\//, '') %>
+  username: <%= uri.user %>
+  password: <%= uri.password %>

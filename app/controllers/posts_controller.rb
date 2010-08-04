@@ -26,6 +26,8 @@ class PostsController < ApplicationController
   # GET /posts/new
   # GET /posts/new.xml
   def new
+    TestMongoDocument.create!(:created_at => Time.now)
+
     @post = Post.new
 
     respond_to do |format|

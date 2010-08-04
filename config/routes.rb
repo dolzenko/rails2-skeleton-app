@@ -1,4 +1,10 @@
 ActionController::Routing::Routes.draw do |map|
+  map.devise_for :users
+
+  #  2. Ensure you have defined root_url to *something* in your config/routes.rb:
+
+  map.root :controller => 'home'
+
   # The priority is based upon order of creation: first created -> highest priority.
 
   # Sample of regular route:

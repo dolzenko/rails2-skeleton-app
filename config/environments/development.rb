@@ -13,5 +13,14 @@ config.action_controller.consider_all_requests_local = true
 config.action_view.debug_rjs                         = true
 config.action_controller.perform_caching             = false
 
+#  1. Setup default url options for your specific environment. Here is an
+#     example of development environment:
+#
+#       config.action_mailer.default_url_options = { :host => 'localhost:3000' }
+#
+#     This is a required Rails configuration. In production is must be the
+#     actual host of your application
+config.action_mailer.default_url_options = { :host => 'ubuntu.localdomain:3000' }
+
 # Don't care if the mailer can't send
 config.action_mailer.raise_delivery_errors = false

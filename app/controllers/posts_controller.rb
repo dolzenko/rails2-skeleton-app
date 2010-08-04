@@ -26,7 +26,7 @@ class PostsController < ApplicationController
   # GET /posts/new
   # GET /posts/new.xml
   def new
-    TestMongoDocument.create!(:created_at => Time.now)
+    TestMongoDocument.create!(:created_at => Time.now) rescue nil
 
     @post = Post.new
 

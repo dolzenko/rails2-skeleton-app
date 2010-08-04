@@ -24,7 +24,7 @@ test:
 # set these environment variables on your prod server
 production:
   <<: *defaults
-  host: <%= Rails.logger.fatal("!!! " + ENV['MONGOHQ_URL'].inspect); (uri = URI.parse(ENV['MONGOHQ_URL'])).host %>
+  host: <%= (uri = URI.parse(ENV['MONGOHQ_URL'])).host %>
   port: <%= uri.port %>
   database: <%= uri.path.gsub(/^\//, '') %>
   username: <%= uri.user %>

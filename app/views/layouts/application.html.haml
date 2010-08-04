@@ -1,0 +1,10 @@
+!!!
+%html
+  %head
+    %title
+    = stylesheet_link_tag :all
+
+  %body
+    %p.notice= flash[:notice]
+    %p.alert= flash[:alert]
+    = yield

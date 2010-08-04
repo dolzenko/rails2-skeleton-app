@@ -1,5 +1,5 @@
 %h1 New post
-- semantic_form_for(@post) do |f|
+- semantic_form_for(@post, :html => { :multipart => true }) do |f|
   = f.error_messages
   %div
 
@@ -7,6 +7,8 @@
     = f.input :body, :label => 'Body'
     = f.input :publication_state, :label => 'Publication state', :as => :radio
     = f.input :allow_comments, :label => 'Allow comments'
+
+    = f.input :avatar
 
     = f.buttons :commit
 

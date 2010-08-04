@@ -18,7 +18,7 @@ Rails::Initializer.run do |config|
   # config.gem "bj"
   # config.gem "hpricot", :version => '0.6', :source => "http://code.whytheluckystiff.net"
   # config.gem "sqlite3-ruby", :lib => "sqlite3"
-  # config.gem "aws-s3", :lib => "aws/s3"
+  config.gem "aws-s3", :lib => "aws/s3", :version => "0.6.2"
   config.gem "devise", :version => "1.0.8"
   config.gem "warden", :version => "0.10.7"
   config.gem "pg", :version => "0.9.0"
@@ -28,6 +28,7 @@ Rails::Initializer.run do |config|
   config.gem "haml", :version => "3.0.15"
   config.gem "compass", :version => "0.10.3"
   config.gem "formtastic", :version => "0.9.10"
+  config.gem "paperclip", :version => "2.3.3"
 
   # Only load the plugins named here, in the order given (default is alphabetical).
   # :all can be used as a placeholder for all plugins not explicitly named

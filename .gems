@@ -1,1 +1,12 @@
-right_aws
+rails -v 2.3.8
+aws-s3 -v 0.6.2
+devise -v 1.0.8
+warden -v 0.10.7
+pg -v 0.9.0
+rspec -v 1.3.0
+rspec-rails -v 1.3.2
+shoulda -v 2.11.3
+haml -v 3.0.15
+compass -v 0.10.3
+formtastic -v 0.9.10
+paperclip -v 2.3.3

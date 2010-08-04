@@ -27,6 +27,7 @@ Rails::Initializer.run do |config|
   config.gem "shoulda", :lib => false, :version => "2.11.3"
   config.gem "haml", :version => "3.0.15"
   config.gem "compass", :version => "0.10.3"
+  config.gem "formtastic", :version => "0.9.10"
 
   # Only load the plugins named here, in the order given (default is alphabetical).
   # :all can be used as a placeholder for all plugins not explicitly named

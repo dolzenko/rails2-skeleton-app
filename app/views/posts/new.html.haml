@@ -1,6 +1,13 @@
 %h1 New post
-- form_for(@post) do |f|
+- semantic_form_for(@post) do |f|
   = f.error_messages
-  %p
-    = f.submit 'Create'
+  %div
+
+    = f.input :title, :label => 'Title'
+    = f.input :body, :label => 'Body'
+    = f.input :publication_state, :label => 'Publication state', :as => :radio
+    = f.input :allow_comments, :label => 'Allow comments'
+
+    = f.buttons :commit
+
 = link_to 'Back', posts_path

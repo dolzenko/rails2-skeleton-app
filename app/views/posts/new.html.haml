@@ -15,5 +15,4 @@
 = link_to 'Back', posts_path
 
 
-= debug TestMongoDocument.all.to_a rescue nil
-= debug ENV['MONGOHQ_URL']
+= debug @coll.find().map { |doc| doc.inspect }.join(", ")

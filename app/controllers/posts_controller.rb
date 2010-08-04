@@ -1,3 +1,6 @@
+require 'uri'
+require 'mongo'
+
 class PostsController < ApplicationController
   layout 'application'
   
@@ -26,7 +29,17 @@ class PostsController < ApplicationController
   # GET /posts/new
   # GET /posts/new.xml
   def new
-    TestMongoDocument.create!(:created_at => Time.now) rescue nil
+    uri = URI.parse(ENV['MONGOHQ_URL'] || "mongodb://localhost/rails2-skeleton-app")
+    conn = Mongo::Connection.new(uri.host, uri.port)
+    db = conn.db(uri.path.gsub(/^\//, ''))
+    db.authenticate(uri.user, uri.password) if uri.user.present?
+
+    @coll = db.collection('test')
+
+    @coll.remove
+    3.times do |i|
+      @coll.insert({'a' => i+1})
+    end
 
     @post = Post.new
 

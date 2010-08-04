@@ -27,3 +27,5 @@ production:
   host: <%= URI.parse(ENV['MONGOHQ_URL']).host %>
   port: <%= URI.parse(ENV['MONGOHQ_URL']).port %>
   database: <%= URI.parse(ENV['MONGOHQ_URL']).path.gsub(/^\//, '') %>
+  username: <%= URI.parse(ENV['MONGOHQ_URL']).user %>
+  password: <%= URI.parse(ENV['MONGOHQ_URL']).password %>

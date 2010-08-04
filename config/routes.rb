@@ -1,4 +1,6 @@
 ActionController::Routing::Routes.draw do |map|
+  map.resources :posts
+
   map.devise_for :users
 
   #  2. Ensure you have defined root_url to *something* in your config/routes.rb:

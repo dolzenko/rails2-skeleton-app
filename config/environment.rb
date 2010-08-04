@@ -24,6 +24,7 @@ Rails::Initializer.run do |config|
   config.gem "pg", :version => "0.9.0"
   config.gem "rspec", :lib => false, :version => "1.3.0"
   config.gem "rspec-rails", :lib => false, :version => "1.3.2"
+  config.gem "shoulda", :lib => false, :version => "2.11.3"
 
   # Only load the plugins named here, in the order given (default is alphabetical).
   # :all can be used as a placeholder for all plugins not explicitly named

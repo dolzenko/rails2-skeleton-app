@@ -43,6 +43,8 @@ test:
   pool: 5
   username: bsmuser
   password: password
+  host: /var/run/postgresql
+  port: 5433
 
 production:
   adapter: postgresql

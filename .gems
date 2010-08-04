@@ -10,5 +10,5 @@ haml -v 3.0.15
 compass -v 0.10.3
 formtastic -v 0.9.10
 paperclip -v 2.3.3
-mongoid -v 1.9.1
+mongo -v 1.0.6
 bson_ext -v 1.0.4

@@ -33,6 +33,12 @@ Rails::Initializer.run do |config|
   config.gem "mongo", :version => "1.0.6"
   config.gem "bson_ext", :version => "1.0.4", :lib => false
 
+  # Gem dependencies are also tracked in Rails.root + ".gems" file for Heroku
+  # deployment. To install all required gems and workaround chicken-egg problem
+  # run this from the Rails.root:
+  #
+  #     ruby -e 'IO.read(".gems").each { |g| system "gem install #{g}" }'
+
   # Only load the plugins named here, in the order given (default is alphabetical).
   # :all can be used as a placeholder for all plugins not explicitly named
   # config.plugins = [ :exception_notification, :ssl_requirement, :all ]

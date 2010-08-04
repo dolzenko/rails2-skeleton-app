@@ -24,8 +24,8 @@ test:
 # set these environment variables on your prod server
 production:
   <<: *defaults
-  host: <%= (uri = URI.parse(ENV['MONGOHQ_URL'])).host %>
-  port: <%= uri.port %>
-  database: <%= uri.path.gsub(/^\//, '') %>
-  username: <%= uri.user %>
-  password: <%= uri.password %>
+  host: flame.mongohq.com
+  port: 27086
+  database: app253830
+  username: app253830
+  password: 321t1f96urmjyvshd5clod

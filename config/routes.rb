@@ -5,7 +5,7 @@ ActionController::Routing::Routes.draw do |map|
 
   #  2. Ensure you have defined root_url to *something* in your config/routes.rb:
 
-  map.root :controller => 'home'
+  map.root :controller => 'home', :action => :index
 
   # The priority is based upon order of creation: first created -> highest priority.
 

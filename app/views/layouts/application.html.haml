@@ -2,9 +2,10 @@
 %html
   %head
     %title
-    = stylesheet_link_tag :all
+    = stylesheet_link_tag "compiled/screen"
 
-  %body
-    %p.notice= flash[:notice]
-    %p.alert= flash[:alert]
-    = yield
+  %body.bp
+    .container
+      %p.notice= flash[:notice]
+      %p.alert= flash[:alert]
+      = yield

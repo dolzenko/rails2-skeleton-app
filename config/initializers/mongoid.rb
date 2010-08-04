@@ -1,4 +1,4 @@
-mongoid_conf = YAML::load_file(Rails.root.join('config/mongoid.yml'))[Rails.env]
+mongoid_conf = YAML::load(ERB.new(IO.read(Rails.root.join('config/mongoid.yml'))).result)[Rails.env]
 
 Mongoid.configure do |config|
   config.master = Mongo::Connection.new(mongoid_conf['host'],
